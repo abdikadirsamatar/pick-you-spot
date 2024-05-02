@@ -1,57 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vacation Cost Calculator</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-  }
-  #calculator {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  input[type="number"] {
-    width: 100px;
-    margin: 5px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick Your Spot</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="calculator">
-  <h2>Vacation Cost Calculator</h2>
-  <label for="flightCost">Flight Cost:</label>
-  <input type="number" id="flightCost" value="0"><br>
-  <label for="accommodationCost">Accommodation Cost per Night:</label>
-  <input type="number" id="accommodationCost" value="0"><br>
-  <label for="days">Number of Days:</label>
-  <input type="number" id="days" value="1"><br>
-  <label for="includeFood">Include Food:</label>
-  <input type="checkbox" id="includeFood" checked><br>
-  <label for="foodCost">Food Cost per Day:</label>
-  <input type="number" id="foodCost" value="0" disabled><br>
-  <button onclick="calculateTotal()">Calculate Total</button><br>
-  <h3>Total Cost: $<span id="totalCost">0</span></h3>
-</div>
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="Pick Your Spot Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/About.html">About</a></li>
+          <li><a href="/service.html">Services</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<script>
-  function calculateTotal() {
-    const flightCost = parseFloat(document.getElementById('flightCost').value);
-    const accommodationCost = parseFloat(document.getElementById('accommodationCost').value);
-    const days = parseInt(document.getElementById('days').value);
-    const includeFood = document.getElementById('includeFood').checked;
-    const foodCost = includeFood ? parseFloat(document.getElementById('foodCost').value) : 0;
-    
-    const totalCost = (flightCost + (accommodationCost * days) + (includeFood ? foodCost * days : 0)).toFixed(2);
-    
-    document.getElementById('totalCost').textContent
+  <section class="main-content">
+    <div class="container">
+      <h1>Welcome to Pick Your Spot</h1>
+      <p>Your go-to destination for all things travel!</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Pick Your Spot</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
